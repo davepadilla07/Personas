@@ -10,5 +10,11 @@
     <string name="registrar">REGISTRAR</string>
     <string name="borrar">BORRAR</string>
     <string name="numero">No.</string>
-    <string name="pasatiempos">Pasatiempos</string>
+    <string name="hobbies">Pasatiempos</string>
+    <string name="listar">Listar</string>
+    <string-array name="opciones">
+        <item>@string/registrar</item>
+        <item>@string/listar</item>
+    </string-array>
+
 </resources>
