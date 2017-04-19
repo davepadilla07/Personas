@@ -41,36 +41,37 @@ public class Registro extends AppCompatActivity {
     //programar evento (edad se pone como string por que no se haran calculos con ella)
 
     public void registrar(View v){
-        String nombre,apellido, aux="";
-        int ed;
-        nombre=nomb.getText().toString().trim();
-        apellido=apell.getText().toString().trim();
-        ed=Integer.parseInt(edad.getText().toString().trim());
+        if (validar()) {
+            String nombre, apellido, aux = "";
+            int ed;
+            nombre = nomb.getText().toString().trim();
+            apellido = apell.getText().toString().trim();
+            ed = Integer.parseInt(edad.getText().toString().trim());
 
-        if(leer.isChecked()){
-            aux = res.getString(R.string.leer);
-        }
-        if(bailar.isChecked()){
-            aux = aux+", "+res.getString(R.string.bailar);
-        }
-        if(programar.isChecked()){
-            aux = aux+", "+res.getString(R.string.programar);
-        }
+            if (leer.isChecked()) {
+                aux = res.getString(R.string.leer);
+            }
+            if (bailar.isChecked()) {
+                aux = aux + ", " + res.getString(R.string.bailar);
+            }
+            if (programar.isChecked()) {
+                aux = aux + ", " + res.getString(R.string.programar);
+            }
 
-        //lo anterior se hace asi en USA
+            //lo anterior se hace asi en USA
         /*
         if(leer.isChecked()) aux = res.getString(R.string.leer);
         if(bailar.isChecked()) aux = aux+", "+res.getString(R.string.bailar);
         if(programar.isChecked()) aux = aux+", "+res.getString(R.string.programar);
         */
 
-        Persona p = new Persona(nombre,apellido,ed,aux);
-        p.guardar();
+            Persona p = new Persona(nombre, apellido, ed, aux);
+            p.guardar();
 
-        //poner un mensaje
-        new AlertDialog.Builder(this).setTitle("Aceptar").setMessage(res.getString(R.string.mensaje)).show();
-        limpiar();
-
+            //poner un mensaje
+            new AlertDialog.Builder(this).setTitle("Aceptar").setMessage(res.getString(R.string.mensaje)).show();
+            limpiar();
+        }
     }
 
     public void borrar(View v){
@@ -90,6 +91,15 @@ public class Registro extends AppCompatActivity {
     public boolean validar(){
         if (nomb.getText().toString().isEmpty()){
             nomb.setError(getResources().getString(R.string.error1));
+            return false;
+        }
+        if (apell.getText().toString().isEmpty()){
+            apell.setError(getResources().getString(R.string.error2));
+            return false;
+        }
+        if (edad.getText().toString().isEmpty()){
+            edad.setError(getResources().getString(R.string.error3));
+            return false;
         }
 
 
