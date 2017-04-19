@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Personas</string>
+    <string name="apellido">LastName</string>
+    <string name="bailar">Dance</string>
+    <string name="borrar">Clean</string>
+    <string name="edad">Age</string>
+    <string name="error1"></string>
+</resources>
