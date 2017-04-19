@@ -13,7 +13,8 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:stretchColumns="*">
+        android:stretchColumns="*"
+        android:id="@+id/tblPersonas">
 
         <TableRow
             android:layout_width="match_parent"
@@ -33,18 +34,16 @@
                 android:id="@+id/textView4" />
 
             <TextView
-                android:text="TextView"
+                android:text="@string/apellido"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView3"
-                tools:text="@string/apellido" />
+                android:id="@+id/textView3" />
 
             <TextView
-                android:text="TextView"
+                android:text="@string/hobbies"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView2"
-                tools:text="@string/hobbies" />
+                android:id="@+id/textView2" />
         </TableRow>
 
     </TableLayout>

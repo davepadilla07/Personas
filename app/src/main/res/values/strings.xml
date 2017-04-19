@@ -7,11 +7,15 @@
     <string name="leer">Leer</string>
     <string name="bailar">Bailar</string>
     <string name="programar">Programar</string>
-    <string name="registrar">REGISTRAR</string>
-    <string name="borrar">BORRAR</string>
+    <string name="registrar">Registrar</string>
+    <string name="borrar">Borrar</string>
     <string name="numero">No.</string>
     <string name="hobbies">Pasatiempos</string>
     <string name="listar">Listar</string>
+    <string name="mensaje">Persona Guardada Exitosamente!</string>
+    <string name="error1">Por favor digite el nombre</string>
+    <string name="error2">Por favor digite el apellido</string>
+    <string name="error3">Por favor digite la edad</string>
     <string-array name="opciones">
         <item>@string/registrar</item>
         <item>@string/listar</item>
