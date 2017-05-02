@@ -5,5 +5,16 @@
     <string name="bailar">Dance</string>
     <string name="borrar">Clean</string>
     <string name="edad">Age</string>
-    <string name="error1"></string>
+    <string name="error1">Please enter the name</string>
+    <string name="error2">Please enter the lastname</string>
+    <string name="error3">Please enter the age</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="leer">Read</string>
+    <string name="listar">List</string>
+    <string name="mensaje">Person save succesfully</string>
+    <string name="nombre">Name</string>
+    <string name="numero">Number</string>
+    <string name="programar">Schedule</string>
+    <string name="registrar">Register</string>
+    <string name="titulo">REGISTER</string>
 </resources>
