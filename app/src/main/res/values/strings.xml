@@ -12,12 +12,14 @@
     <string name="numero">No.</string>
     <string name="hobbies">Pasatiempos</string>
     <string name="listar">Listar</string>
+    <string name="mostrar">Mostrar en Tabla</string>
     <string name="mensaje">Persona Guardada Exitosamente!</string>
     <string name="error1">Por favor digite el nombre</string>
     <string name="error2">Por favor digite el apellido</string>
     <string name="error3">Por favor digite la edad</string>
     <string-array name="opciones">
         <item>@string/registrar</item>
+        <item>@string/mostrar</item>
         <item>@string/listar</item>
     </string-array>
 

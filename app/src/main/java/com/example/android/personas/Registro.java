@@ -41,8 +41,10 @@ public class Registro extends AppCompatActivity {
     //programar evento (edad se pone como string por que no se haran calculos con ella)
 
     public void registrar(View v){
+
         if (validar()) {
-            String nombre, apellido, aux = "";
+
+            String nombre, apellido, aux = "", foto;
             int ed;
             nombre = nomb.getText().toString().trim();
             apellido = apell.getText().toString().trim();
@@ -64,8 +66,9 @@ public class Registro extends AppCompatActivity {
         if(bailar.isChecked()) aux = aux+", "+res.getString(R.string.bailar);
         if(programar.isChecked()) aux = aux+", "+res.getString(R.string.programar);
         */
+            foto = String.valueOf(fotoAleatoria());
 
-            Persona p = new Persona(nombre, apellido, ed, aux);
+            Persona p = new Persona(foto, nombre, apellido, ed, aux);
             p.guardar();
 
             //poner un mensaje
@@ -104,6 +107,13 @@ public class Registro extends AppCompatActivity {
 
 
         return true;
+    }
+
+    //Metodo aleatorio
+    public int fotoAleatoria(){
+        int fotos[] = {R.drawable.images,R.drawable.images2,R.drawable.images3};
+        int numero = (int)(Math.random() *2);
+        return fotos[numero];
     }
 
 }

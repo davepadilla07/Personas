@@ -17,4 +17,5 @@
     <string name="programar">Schedule</string>
     <string name="registrar">Register</string>
     <string name="titulo">REGISTER</string>
+    <string name="mostrar">Show on Table</string>
 </resources>
