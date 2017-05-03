@@ -112,7 +112,7 @@ public class Registro extends AppCompatActivity {
     //Metodo aleatorio
     public int fotoAleatoria(){
         int fotos[] = {R.drawable.images,R.drawable.images2,R.drawable.images3};
-        int numero = (int)(Math.random() *2);
+        int numero = (int)(Math.random() *3);
         return fotos[numero];
     }
 
