@@ -116,4 +116,16 @@ public class Registro extends AppCompatActivity {
         return fotos[numero];
     }
 
+    //buscar
+    public void buscar(View v){
+        String nombre;
+        Persona p;
+
+        nombre = nomb.getText().toString().trim();
+        p=Datos.buscarPersonas(getApplicationContext(),nombre);
+
+        apell.setText(p.getApellido());
+        edad.setText(""+p.getEdad());
+    }
+
 }

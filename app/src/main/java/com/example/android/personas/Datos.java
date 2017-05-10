@@ -52,4 +52,44 @@ public class Datos {
 
     }
 
+    public static Persona buscarPersonas(Context contexto, String nomb){
+
+        //Declarar variables
+        SQLiteDatabase db;
+        String sql,foto,nombre,apellido,pasatiempo;
+        int edad;
+        ArrayList<Persona> personas=new ArrayList();
+        Persona p=null;
+
+        //Abrir la base de datos de lectura
+        PersonasSQLiteOpenHelper aux= new PersonasSQLiteOpenHelper(contexto,"DBPersonas",null,1);
+        db=aux.getReadableDatabase();
+
+        //(cursor)
+        sql="Select foto, nombre, apellido, edad, pasatiempo from Personas where nombre ='%"+nomb+"%'";
+        Cursor c= db.rawQuery(sql,null);
+
+        //Recorrido del cursor
+        if (c.moveToFirst()){
+
+                foto=c.getString(0);
+                nombre=c.getString(1);
+                apellido=c.getString(2);
+                edad=Integer.parseInt(c.getString(3));
+                pasatiempo=c.getString(4);
+
+                p = new Persona(foto,nombre,apellido,edad,pasatiempo);
+                return p;
+
+
+        }
+
+        //Cierro conexion
+        db.close();
+
+        //Retorno Personas
+        return p;
+
+    }
+
 }

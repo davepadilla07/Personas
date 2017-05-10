@@ -98,4 +98,41 @@ public class Persona {
 
         //Datos.guardar(this);
     }
+
+    public void modificar(Context contexto){
+
+        //Declarar variables
+        SQLiteDatabase db;
+        String sql;
+
+        //Abrir la conexion (en modo de escritura)
+        PersonasSQLiteOpenHelper aux= new PersonasSQLiteOpenHelper(contexto,"DBPersonas",null,1);
+        db = aux.getWritableDatabase();
+
+        //Insercion forma 1
+        sql="UPDATE Persona set foto="+this.getFoto()+"',nombre='"+this.getNombre()+"',apellido='"+this.getApellido()+"',edad='"+this.getEdad()+"',pasatiempo='"+this.getPasatiempos()+"' where nombre like '%"+this.getNombre()+"%'";
+        db.execSQL(sql);
+
+        db.close();
+
+    }
+
+    public void eliminar(Context contexto){
+
+        //Declarar variables
+        SQLiteDatabase db;
+        String sql;
+
+        //Abrir la conexion (en modo de escritura)
+        PersonasSQLiteOpenHelper aux= new PersonasSQLiteOpenHelper(contexto,"DBPersonas",null,1);
+        db = aux.getWritableDatabase();
+
+        //Insercion forma 1
+        sql="DELETE FROM Persona where nombre like '%"+this.getNombre()+"%'";
+        db.execSQL(sql);
+
+        db.close();
+
+    }
+
 }

@@ -13,7 +13,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -27,14 +27,30 @@
             android:textAlignment="center"
             android:textSize="24sp" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/txtNombre"
-            android:textSize="18sp"
-            android:hint="@string/nombre" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txtNombre"
+                android:textSize="18sp"
+                android:hint="@string/nombre"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="@string/buscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button4"
+                android:layout_weight="1"
+                android:onClick="buscar" />
+
+        </LinearLayout>
 
         <EditText
             android:layout_width="match_parent"
@@ -74,7 +90,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <Button
                 android:text="@string/registrar"
@@ -93,5 +109,26 @@
                 android:onClick="borrar" />
         </LinearLayout>
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="@string/modificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="@string/eliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button2"
+                android:layout_weight="1" />
+        </LinearLayout>
+
     </LinearLayout>
+
 </RelativeLayout>
