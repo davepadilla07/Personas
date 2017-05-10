@@ -18,7 +18,7 @@ public class ListarPersonas extends AppCompatActivity {
 
         //Capturar objetos
         lista = (ListView)findViewById(R.id.lvListadoPersonas);
-        personas = Datos.getPersonas();
+        personas = Datos.traerPersonas(getApplicationContext());
 
         //Creacion del array adapter de las personas (el creado por nosotros)
         AdaptadorPersona adapter = new AdaptadorPersona(this,personas);

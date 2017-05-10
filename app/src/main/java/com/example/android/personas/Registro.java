@@ -69,7 +69,7 @@ public class Registro extends AppCompatActivity {
             foto = String.valueOf(fotoAleatoria());
 
             Persona p = new Persona(foto, nombre, apellido, ed, aux);
-            p.guardar();
+            p.guardar(getApplicationContext());
 
             //poner un mensaje
             new AlertDialog.Builder(this).setTitle("Aceptar").setMessage(res.getString(R.string.mensaje)).show();

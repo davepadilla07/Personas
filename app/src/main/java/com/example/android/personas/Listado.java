@@ -20,7 +20,7 @@ public class Listado extends AppCompatActivity {
 
         //capturar la tabla
         tabla=(TableLayout)findViewById(R.id.tblPersonas);
-        personas = Datos.getPersonas();
+        personas = Datos.traerPersonas(getApplicationContext());
 
         //recorrer el vector de personas e ir mostrando en pantalla
         for (int i = 0; i < personas.size(); i++){
